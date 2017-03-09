@@ -39,9 +39,12 @@ int main()
 			ch = getchar();
 		}
 
-		str[i] = '\0';
-
-		length = i;
+        if (i >= MAX_LENGTH) {
+            length = MAX_LENGTH - 1;
+        } else {
+            length = i;
+        }
+        str[length] = '\0';
 
 		check = reverse(str, length);
 
